@@ -1,0 +1,57 @@
+# Redirections permanentes
+/fr/*    /:splat    301
+/en/blog-pictory    /en/blog-pictory.html    301
+/en/blog-akool      /en/blog-akool.html      301
+/en/blog-heygen     /en/blog-heygen.html     301
+/en/blog-invideo    /en/blog-invideo.html    301
+
+# Redirections pour URLs courtes
+/guide-pictory      /blog-pictory.html       301
+/guide-akool        /blog-akool.html         301
+/guide-heygen       /blog-heygen.html        301
+/guide-invideo      /blog-invideo.html       301
+
+# Redirections de sécurité - HTTPS forcé
+http://rayzvideoai.com/*         https://rayzvideoai.com/:splat    301!
+http://www.rayzvideoai.com/*     https://rayzvideoai.com/:splat    301!
+https://www.rayzvideoai.com/*    https://rayzvideoai.com/:splat    301!
+
+# ==========================
+# Language-based redirects (Non-FR -> EN)
+# NB: "Language=" accepte une liste sans espaces et matche la 1ère langue d'Accept-Language
+#     Le bloc ci-dessous couvre les principales locales non-FR.
+# ==========================
+
+# Ne jamais re-router le contenu déjà en anglais
+/en/*            /en/:splat       200
+
+# Protéger les assets communs pour éviter des redirections inutiles
+/images/*        /images/:splat   200
+/fonts/*         /fonts/:splat    200
+/favicon.ico     /favicon.ico     200
+/robots.txt      /robots.txt      200
+/sitemap.xml     /sitemap.xml     200
+/styles.min.css  /styles.min.css  200
+/main.min.js     /main.min.js     200
+/styles.css      /styles.css      200
+/main.js         /main.js         200
+/videos/*        /videos/:splat   200
+
+# Pages racine -> EN si langue ≠ fr
+/                /en/             302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/index.html      /en/             302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+
+# Pages FR -> équivalents EN si langue ≠ fr
+/blog.html                       /en/blog.html            302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/blog-pictory.html               /en/blog-pictory.html    302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/blog-akool.html                 /en/blog-akool.html      302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/blog-heygen.html                /en/blog-heygen.html     302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/blog-invideo.html               /en/blog-invideo.html    302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/mentions-legales.html           /en/legal-notice.html    302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+/politique-de-confidentialite.html /en/privacy-policy.html 302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+
+# Fallback: toute autre page FR -> équivalent EN si langue ≠ fr
+/*                             /en/:splat           302  Language=en,en-us,en-gb,en-au,en-ca,en-nz,en-ie,de,de-de,es,es-es,es-419,es-mx,es-ar,it,it-it,pt,pt-pt,pt-br,nl,nl-nl,sv,da,fi,no,nb,nn,pl,cs,sk,sl,hu,ro,bg,hr,el,ru,uk,tr,ar,he,iw,fa,hi,bn,ur,id,ms,vi,th,zh,zh-cn,zh-tw,ja,ko,et,lv,lt,ga,gl,eu,ca,is,sr
+
+# Page 404 personnalisée
+/*    /404.html    404

@@ -1,0 +1,187 @@
+[build]
+  publish = "."
+  command = "bash ./indexnow-ping.sh"
+
+# --------------------------
+# Sécurité globale (modernes)
+# --------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Clickjacking
+    X-Frame-Options = "DENY"
+    # Moteurs MIME
+    X-Content-Type-Options = "nosniff"
+    # Référents
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # HSTS (HTTPS uniquement)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    # Isolation & ressources cross-origin
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    # Permissions (ex-Feature-Policy)
+    Permissions-Policy = "accelerometer=(), camera=(), microphone=(), geolocation=(), gyroscope=(), magnetometer=(), payment=(), usb=(), autoplay=(self \"https://www.youtube-nocookie.com\"), fullscreen=(self), encrypted-media=(self)"
+    # CSP permissive mais sûre pour ton stack (GA4, Google Fonts, YouTube nocookie, images https)
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https:; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; frame-src https://www.youtube-nocookie.com; media-src 'self' https:"
+
+# --------------------------
+# Caching (perf)
+# --------------------------
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fichiers non versionnés : cache raisonnable
+[[headers]]
+  for = "/styles.min.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/main.min.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/main.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# --------------------------
+# Langue (Content-Language)
+# --------------------------
+[[headers]]
+  for = "/en/*"
+  [headers.values]
+    Content-Language = "en"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Language = "fr"
+
+# --------------------------
+# Redirections existantes
+# --------------------------
+[[redirects]]
+  from = "/fr/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog-pictory"
+  to = "/en/blog-pictory.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog-akool"
+  to = "/en/blog-akool.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog-heygen"
+  to = "/en/blog-heygen.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog-invideo"
+  to = "/en/blog-invideo.html"
+  status = 301
+
+# Anciennes URLs courtes (conservées)
+[[redirects]]
+  from = "/guide-pictory"
+  to = "/blog-pictory.html"
+  status = 301
+
+[[redirects]]
+  from = "/guide-akool"
+  to = "/blog-akool.html"
+  status = 301
+
+# ---------------------------------------------------------
+# Non-FR -> EN (basé sur Accept-Language) — règles ciblées
+# ---------------------------------------------------------
+# Page d'accueil
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/index.html"
+  to = "/en/"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+# Pages FR -> EN si langue ≠ fr
+[[redirects]]
+  from = "/blog.html"
+  to = "/en/blog.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/blog-pictory.html"
+  to = "/en/blog-pictory.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/blog-akool.html"
+  to = "/en/blog-akool.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/blog-heygen.html"
+  to = "/en/blog-heygen.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/blog-invideo.html"
+  to = "/en/blog-invideo.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/mentions-legales.html"
+  to = "/en/legal-notice.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+[[redirects]]
+  from = "/politique-de-confidentialite.html"
+  to = "/en/privacy-policy.html"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }
+
+# Fallback générique : toute autre page FR -> EN si langue ≠ fr
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  force = false
+  conditions = { Language = ["en","en-us","en-gb","en-au","en-ca","en-nz","en-ie","de","de-de","es","es-es","es-419","es-mx","es-ar","it","it-it","pt","pt-pt","pt-br","nl","nl-nl","sv","da","fi","no","nb","nn","pl","cs","sk","sl","hu","ro","bg","hr","el","ru","uk","tr","ar","he","iw","fa","hi","bn","ur","id","ms","vi","th","zh","zh-cn","zh-tw","ja","ko","et","lv","lt","ga","gl","eu","ca","is","sr"] }

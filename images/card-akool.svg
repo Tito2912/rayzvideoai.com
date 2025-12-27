@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Akool — lip-sync et avatars IA</title>
+  <desc id="desc">Visuel de couverture pour l'article Akool, style gradient violet et turquoise.</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b213b"/>
+      <stop offset="40%" stop-color="#2b3566"/>
+      <stop offset="100%" stop-color="#1ad2a4"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7cf5da" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7cf5da" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0d1224"/>
+  <rect x="40" y="40" width="1200" height="640" rx="32" fill="url(#g)"/>
+
+  <circle cx="190" cy="170" r="90" fill="#7cf5da" opacity="0.12"/>
+  <circle cx="360" cy="520" r="120" fill="#7cf5da" opacity="0.12"/>
+  <circle cx="1050" cy="240" r="140" fill="#ffffff" opacity="0.08"/>
+
+  <rect x="70" y="250" width="1140" height="9" rx="4.5" fill="url(#glow)"/>
+
+  <text x="80" y="200" fill="#c7e7ff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="600" letter-spacing="1">RayzVideoAI · Guides IA vidéo</text>
+  <text x="80" y="320" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="700">Akool</text>
+  <text x="80" y="400" fill="#e7f8f3" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="600">Lip-sync, avatars & traduction vidéo</text>
+  <text x="80" y="460" fill="#d4e8ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="400">Workflows · voix multilingues · talking photo · localisation express</text>
+
+  <rect x="980" y="470" width="180" height="70" rx="14" fill="#ffffff" opacity="0.16"/>
+  <text x="1010" y="518" fill="#f3fffb" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">GUIDE 2025</text>
+</svg>

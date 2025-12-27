@@ -1,0 +1,52 @@
+# robots.txt - RayzVideoAI
+
+# --- General Rules ---
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# --- Sitemaps (index + FR + EN) ---
+Sitemap: https://rayzvideoai.com/sitemap.xml
+Sitemap: https://rayzvideoai.com/sitemap-fr.xml
+Sitemap: https://rayzvideoai.com/en/sitemap-en.xml
+
+# --- Bots specifics (ads & images) ---
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# --- Tracking parameters (avoid duplicate URLs) ---
+# Using standard Disallow rules for broad parser compatibility.
+Disallow: /*?utm_source=
+Disallow: /*&utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*&utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*&utm_campaign=
+Disallow: /*?utm_term=
+Disallow: /*&utm_term=
+Disallow: /*?utm_content=
+Disallow: /*&utm_content=
+Disallow: /*?utm_id=
+Disallow: /*&utm_id=
+Disallow: /*?gclid=
+Disallow: /*&gclid=
+Disallow: /*?fbclid=
+Disallow: /*&fbclid=
+Disallow: /*?ref=
+Disallow: /*&ref=
+Disallow: /*?aff=
+Disallow: /*&aff=
+
+# --- Crawl-delay (disabled by default) ---
+# Google ignores Crawl-delay; Bing/Yandex can use it.
+# Uncomment only if server overload :
+# User-agent: bingbot
+# Crawl-delay: 3
+# User-agent: Yandex
+# Crawl-delay: 3

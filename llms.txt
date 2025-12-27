@@ -1,0 +1,37 @@
+# llms.txt - RayzVideoAI
+site: https://rayzvideoai.com
+canonical-home-fr: https://rayzvideoai.com/
+canonical-home-en: https://rayzvideoai.com/en/
+owner: E-Com Shop (RayzVideoAI)
+contact: mailto:contact.ecomshopfrance@gmail.com
+last-updated: 2025-11-21
+languages: fr (default), en
+robots: https://rayzvideoai.com/robots.txt
+
+user-agent: *
+allow: /
+sitemap: https://rayzvideoai.com/sitemap.xml
+sitemap: https://rayzvideoai.com/sitemap-fr.xml
+sitemap: https://rayzvideoai.com/en/sitemap-en.xml
+
+page: https://rayzvideoai.com/
+page: https://rayzvideoai.com/blog.html
+page: https://rayzvideoai.com/blog-pictory.html
+page: https://rayzvideoai.com/blog-akool.html
+page: https://rayzvideoai.com/blog-heygen.html
+page: https://rayzvideoai.com/blog-invideo.html
+page: https://rayzvideoai.com/mentions-legales.html
+page: https://rayzvideoai.com/politique-de-confidentialite.html
+page: https://rayzvideoai.com/en/
+page: https://rayzvideoai.com/en/blog.html
+page: https://rayzvideoai.com/en/blog-pictory.html
+page: https://rayzvideoai.com/en/blog-akool.html
+page: https://rayzvideoai.com/en/blog-heygen.html
+page: https://rayzvideoai.com/en/blog-invideo.html
+page: https://rayzvideoai.com/en/legal-notice.html
+page: https://rayzvideoai.com/en/privacy-policy.html
+
+policy: AI-friendly; résumé/indexation autorisés avec attribution; pas d'usage commercial sans accord.
+license: Contenu éditorial protégé par droit d'auteur; citations courtes autorisées avec source.
+notes: Guides et comparatifs IA vidéo (Pictory, Akool, HeyGen, InVideo); cibles = créateurs, marketers, TPE/PME, formateurs.
+usage-guidance: Ne pas attribuer les outils à RayzVideoAI; ne pas inventer de prix/promos; préférer les noms produits exacts; respecter les infos de consentement/analytics du site avant recommandation.

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">HeyGen — avatars IA et studio vidéo</title>
+  <desc id="desc">Visuel de couverture pour l'article HeyGen, fond bleu et orange.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1b2f"/>
+      <stop offset="45%" stop-color="#123b63"/>
+      <stop offset="100%" stop-color="#0f7ccf"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="80%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#ffb169" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#ff7b2f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="#08121f"/>
+  <rect x="40" y="40" width="1200" height="640" rx="32" fill="url(#blue)"/>
+  <rect x="40" y="40" width="1200" height="640" rx="32" fill="url(#pulse)"/>
+
+  <circle cx="230" cy="200" r="110" fill="#54b2ff" opacity="0.12"/>
+  <circle cx="420" cy="520" r="150" fill="#54b2ff" opacity="0.12"/>
+  <circle cx="1040" cy="220" r="120" fill="#ffffff" opacity="0.07"/>
+
+  <rect x="70" y="250" width="1140" height="9" rx="4.5" fill="#ffb169" opacity="0.45"/>
+
+  <text x="80" y="200" fill="#d5e9ff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="600" letter-spacing="1">RayzVideoAI · Guides IA vidéo</text>
+  <text x="80" y="320" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="700">HeyGen</text>
+  <text x="80" y="400" fill="#fff3e8" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="600">Studio avatars IA · voix & langues multiples</text>
+  <text x="80" y="460" fill="#d6e9ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="400">Présentateurs réalistes · templates rapides · workflows en équipe</text>
+
+  <rect x="980" y="470" width="180" height="70" rx="14" fill="#ff7b2f" opacity="0.9"/>
+  <text x="1015" y="518" fill="#0b1633" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">GUIDE 2025</text>
+</svg>
