@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 
 SITEMAPS = [pathlib.Path("sitemap-fr.xml"), pathlib.Path("en/sitemap-en.xml")]
 HOST = "rayzvideoai.com"
-KEY = "ab507b8db88046e6923b95eb9f486a52"
+KEY = "5ac68a8c77304486bbc9a445d8a35fee"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 API_URL = "https://api.indexnow.org/indexnow"
 
