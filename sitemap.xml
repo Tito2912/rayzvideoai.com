@@ -8,4 +8,12 @@
     <loc>https://rayzvideoai.com/en/sitemap-en.xml</loc>
     <lastmod>2026-01-24</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://rayzvideoai.com/es/sitemap-es.xml</loc>
+    <lastmod>2026-01-24</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://rayzvideoai.com/de/sitemap-de.xml</loc>
+    <lastmod>2026-01-24</lastmod>
+  </sitemap>
 </sitemapindex>

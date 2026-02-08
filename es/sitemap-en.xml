@@ -8,10 +8,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/blog</loc>
@@ -19,10 +16,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/blog"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/blog"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/blog"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/blog-pictory</loc>
@@ -30,10 +24,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/blog-pictory"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/blog-pictory"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/blog-pictory"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/blog-pictory"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/blog-pictory"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/blog-akool</loc>
@@ -41,10 +32,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/blog-akool"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/blog-akool"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/blog-akool"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/blog-akool"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/blog-akool"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/blog-heygen</loc>
@@ -52,10 +40,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/blog-heygen"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/blog-heygen"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/blog-heygen"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/blog-heygen"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/blog-heygen"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/blog-invideo</loc>
@@ -63,10 +48,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/blog-invideo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/blog-invideo"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/blog-invideo"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/blog-invideo"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/blog-invideo"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/legal-notice</loc>
@@ -74,10 +56,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/mentions-legales"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/mentions-legales"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/legal-notice"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/legal-notice"/>
-</url>
+  </url>
 
   <url>
     <loc>https://rayzvideoai.com/en/privacy-policy</loc>
@@ -85,9 +64,6 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/politique-de-confidentialite"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/politique-de-confidentialite"/>
-  
-    <xhtml:link rel="alternate" hreflang="es" href="https://rayzvideoai.com/es/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://rayzvideoai.com/de/privacy-policy"/>
-</url>
+  </url>
 
 </urlset>

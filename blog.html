@@ -1,48 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog — IA vidéo : guides & workflows | RayzVideoAI</title>
-  <meta name="description" content="Guides pratiques, comparatifs et workflows IA vidéo pour Pictory, Akool, HeyGen et InVideo. Conseils actionnables et checklists." />
-  <link rel="canonical" href="https://rayzvideoai.com/blog" />
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  <link rel="manifest" href="/images/site.webmanifest" />
-  <meta name="msapplication-TileColor" content="#050816" />
-  <meta name="msapplication-config" content="/images/browserconfig.xml" />
-  <meta name="theme-color" content="#050816" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Blog — IA vidéo : guides & workflows" />
-  <meta property="og:description" content="Guides pratiques, comparatifs et workflows IA vidéo pour Pictory, Akool, HeyGen et InVideo." />
-  <meta property="og:url" content="https://rayzvideoai.com/blog" />
-  <meta property="og:image" content="https://rayzvideoai.com/images/og-social.jpg" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:locale:alternate" content="en_US" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog — IA vidéo : guides & workflows" />
-  <meta name="twitter:description" content="Comparatifs, cas d'usage et checklists IA vidéo." />
-  <meta name="twitter:image" content="https://rayzvideoai.com/images/og-social.jpg" />
-
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="fr" href="https://rayzvideoai.com/blog" />
-  <link rel="alternate" hreflang="en" href="https://rayzvideoai.com/en/blog" />
-  <link rel="alternate" hreflang="x-default" href="https://rayzvideoai.com/blog" />
-
-  <!-- Préconnexions utiles -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.min.css" />
-  <style>
+<html dir="ltr" lang="fr">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Blog — IA vidéo : guides &amp; workflows | RayzVideoAI</title>
+<meta name="description" content="Guides pratiques, comparatifs et workflows IA vidéo pour Pictory, Akool, HeyGen et InVideo. Conseils actionnables et checklists."/>
+<link rel="canonical" href="https://rayzvideoai.com/blog"/>
+<!-- Favicons -->
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/images/site.webmanifest" rel="manifest"/>
+<meta name="msapplication-TileColor" content="#050816"/>
+<meta name="msapplication-config" content="/images/browserconfig.xml"/>
+<meta name="theme-color" content="#050816"/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Blog — IA vidéo : guides &amp; workflows | RayzVideoAI"/>
+<meta property="og:description" content="Guides pratiques, comparatifs et workflows IA vidéo pour Pictory, Akool, HeyGen et InVideo. Conseils actionnables et checklists."/>
+<meta property="og:url" content="https://rayzvideoai.com/blog"/>
+<meta property="og:image" content="https://rayzvideoai.com/images/og-social.jpg"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Blog — IA vidéo : guides &amp; workflows | RayzVideoAI"/>
+<meta name="twitter:description" content="Guides pratiques, comparatifs et workflows IA vidéo pour Pictory, Akool, HeyGen et InVideo. Conseils actionnables et checklists."/>
+<meta name="twitter:image" content="https://rayzvideoai.com/images/og-social.jpg"/>
+<!-- Hreflang -->
+<link href="https://rayzvideoai.com/blog" hreflang="fr" rel="alternate"/>
+<link href="https://rayzvideoai.com/en/blog" hreflang="en" rel="alternate"/>
+<link href="https://rayzvideoai.com/blog" hreflang="x-default" rel="alternate"/>
+<link href="https://rayzvideoai.com/es/blog" hreflang="es" rel="alternate"/>
+<link href="https://rayzvideoai.com/de/blog" hreflang="de" rel="alternate"/>
+<!-- Préconnexions utiles -->
+<link rel="preconnect" href="https://www.googletagmanager.com"/>
+<!-- Styles -->
+<link href="styles.min.css" rel="stylesheet"/>
+<style>
   /* Force 2 colonnes sur desktop pour la grille du blog,
      tout en gardant 1 colonne sur mobile */
   @media (min-width: 861px){
@@ -52,13 +46,11 @@
     .grid.blog-two { grid-template-columns: 1fr !important; }
   }
   </style>
-
-  <!-- LCP: précharge la première image visible (carte 1) -->
-  <link rel="preload" as="image" href="images/card-pictory.webp" imagesrcset="images/card-pictory.webp 1x, images/card-pictory.jpg 2x" />
-
-  <!-- GA4 (consent par défaut refusé) -->
-  
-  <script>
+<!-- LCP: précharge la première image visible (carte 1) -->
+<link as="image" href="images/card-pictory.webp" imagesrcset="images/card-pictory.webp 1x, images/card-pictory.jpg 2x" rel="preload"/>
+<!-- GA4 (consent par défaut refusé) -->
+<!-- JSON-LD BreadcrumbList (Home > Blog) -->
+<meta property="og:site_name" content="rayzvideoai.com"/><meta property="og:image:alt" content="Blog — IA vidéo : guides &amp; workflows | RayzVideoAI"/><meta name="twitter:url" content="https://rayzvideoai.com/blog"/><meta name="twitter:image:alt" content="Blog — IA vidéo : guides &amp; workflows | RayzVideoAI"/><link rel="preconnect" href="https://www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="https://www.gstatic.com" crossorigin=""/><script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent','default',{
@@ -66,10 +58,7 @@
       ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted'
     });
     gtag('js', new Date());
-  </script>
-
-  <!-- JSON-LD BreadcrumbList (Home > Blog) -->
-  <script type="application/ld+json">
+  </script><script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
@@ -78,162 +67,129 @@
       {"@type":"ListItem","position":2,"name":"Blog","item":"https://rayzvideoai.com/blog"}
     ]
   }
-  </script>
-
-</head>
+  </script></head>
 <body>
-
 <!-- HEADER (identique Home) -->
 <header class="header" role="banner">
-  <div class="container">
-    <a href="/" class="logo">RayzVideoAI</a>
-    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
-    <nav id="site-nav" class="nav" role="navigation" aria-label="Navigation principale">
-      <a href="index.html#comparatif" class="nav-link">Comparatif</a>
-      <a href="index.html#outils" class="nav-link">Outils</a>
-      <a href="index.html#pourquoi" class="nav-link">Pourquoi l'IA</a>
-      <a href="index.html#guide" class="nav-link">Choisir</a>
-      <a href="index.html#faq" class="nav-link">FAQ</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
-      <a href="/en/blog.html" class="nav-link lang-switcher" aria-label="English version">EN</a>
-    </nav>
-  </div>
+<div class="container">
+<a class="logo" href="/">RayzVideoAI</a>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Menu" class="burger"><span></span><span></span><span></span></button>
+<nav aria-label="Navigation principale" class="nav" id="site-nav" role="navigation">
+<a class="nav-link" href="index.html#comparatif">Comparatif</a>
+<a class="nav-link" href="index.html#outils">Outils</a>
+<a class="nav-link" href="index.html#pourquoi">Pourquoi l'IA</a>
+<a class="nav-link" href="index.html#guide">Choisir</a>
+<a class="nav-link" href="index.html#faq">FAQ</a>
+<a class="nav-link" href="blog.html">Blog</a>
+<a class="nav-link" href="index.html#contact">Contact</a>
+<a aria-current="page" class="nav-link lang-switcher" href="/blog" hreflang="fr">FR</a><a class="nav-link lang-switcher" href="/en/blog" hreflang="en">EN</a><a class="nav-link lang-switcher" href="/es/blog" hreflang="es">ES</a><a class="nav-link lang-switcher" href="/de/blog" hreflang="de">DE</a></nav>
+</div>
 </header>
-
 <!-- MAIN (ajouté) -->
 <main id="contenu-principal">
-
 <!-- ENTÊTE DE PAGE -->
-<section class="intro" aria-labelledby="blog-title">
-  <div class="container">
-    <h1 id="blog-title">Blog — IA vidéo : guides, comparatifs & workflows</h1>
-    <p>Des articles pédagogiques pour <strong>créer plus vite</strong>, <strong>optimiser vos coûts</strong> et <strong>scaler vos contenus</strong> avec Pictory, Akool, HeyGen et InVideo. Ciblé créateurs solo, TPE/PME, formateurs et social media teams (FR/BE/CA).</p>
-    <p><strong>Ce que vous trouverez :</strong> des tutoriels pas-à-pas, des checklists prêtes à l'emploi, des comparatifs objectifs et des plans d'action pour passer de l'idée à la vidéo publiée sans perdre de temps. Chaque article inclut des temps moyens, des cas d'usage métier (formation, e-commerce, communication interne) et un focus RGPD/voix/droits pour rester compliant.</p>
-    <p><strong>Notre méthode :</strong> nous testons les outils sur des scénarios concrets (script long, tournage inexistant, vidéo à traduire, cut social media). Nous mesurons le temps gagné, le coût final, la qualité audio/visuelle et la vitesse de prise en main. Lorsque des liens sont affiliés, ils sont signalés <code>rel="sponsored"</code> et n'influencent pas la notation du workflow.</p>
-    <ul class="bullets">
-      <li><strong>Workflows guidés :</strong> transformer un article en vidéo, doubler une vidéo en 5 langues, créer un avatar qui respecte votre charte.</li>
-      <li><strong>Erreurs fréquentes :</strong> voix robotisées, sous-titres mal timecodés, tailles sociales imparfaites, gestion de la marque.</li>
-      <li><strong>Templates prêts à l'emploi :</strong> prompts, scripts d'intro/outro, check de livraison pour les freelances et procédures internes.</li>
-      <li><strong>Benchmarks rapides :</strong> tarifs, limites d'exports, rendu HD/4K, qualité du lipsync et options collaboratives.</li>
-    </ul>
-  </div>
+<section aria-labelledby="blog-title" class="intro">
+<div class="container">
+<h1 id="blog-title">Blog — IA vidéo : guides, comparatifs &amp; workflows</h1>
+<p>Des articles pédagogiques pour <strong>créer plus vite</strong>, <strong>optimiser vos coûts</strong> et <strong>scaler vos contenus</strong> avec Pictory, Akool, HeyGen et InVideo. Ciblé créateurs solo, TPE/PME, formateurs et social media teams (FR/BE/CA).</p>
+<p><strong>Ce que vous trouverez :</strong> des tutoriels pas-à-pas, des checklists prêtes à l'emploi, des comparatifs objectifs et des plans d'action pour passer de l'idée à la vidéo publiée sans perdre de temps. Chaque article inclut des temps moyens, des cas d'usage métier (formation, e-commerce, communication interne) et un focus RGPD/voix/droits pour rester compliant.</p>
+<p><strong>Notre méthode :</strong> nous testons les outils sur des scénarios concrets (script long, tournage inexistant, vidéo à traduire, cut social media). Nous mesurons le temps gagné, le coût final, la qualité audio/visuelle et la vitesse de prise en main. Lorsque des liens sont affiliés, ils sont signalés <code>rel="sponsored"</code> et n'influencent pas la notation du workflow.</p>
+<ul class="bullets">
+<li><strong>Workflows guidés :</strong> transformer un article en vidéo, doubler une vidéo en 5 langues, créer un avatar qui respecte votre charte.</li>
+<li><strong>Erreurs fréquentes :</strong> voix robotisées, sous-titres mal timecodés, tailles sociales imparfaites, gestion de la marque.</li>
+<li><strong>Templates prêts à l'emploi :</strong> prompts, scripts d'intro/outro, check de livraison pour les freelances et procédures internes.</li>
+<li><strong>Benchmarks rapides :</strong> tarifs, limites d'exports, rendu HD/4K, qualité du lipsync et options collaboratives.</li>
+</ul>
+</div>
 </section>
-
 <!-- GRILLE D'ARTICLES -->
-<section class="intro" aria-labelledby="cards-title">
-  <div class="container">
-    <h2 id="cards-title">Derniers articles</h2>
-
-    <div class="grid blog-two">
-      <!-- Pictory -->
-      <article class="card" aria-labelledby="c1">
-        <img src="images/card-pictory.webp"
-             srcset="images/card-pictory.webp 1x, images/card-pictory.jpg 2x"
-             alt="Guide Pictory AI"
-             width="640" height="360"
-             loading="eager" fetchpriority="high" decoding="async" />
-        <h3 id="c1">Pictory : avis, tutoriel & prix (guide 2025)</h3>
-        <p>Script/URL → vidéo en minutes : cas d'usage, workflow pas-à-pas, erreurs à éviter et checklists.</p>
-        <p><small>15 août 2025 · ~14 min de lecture</small></p>
-        <div class="cta-row">
-          <a class="btn" href="blog-pictory.html">Lire le guide Pictory</a>
-          <a class="btn btn-primary" href="https://pictory.ai?ref=pictoryavis" rel="sponsored">Essayer Pictory</a>
-        </div>
-      </article>
-
-      <!-- Akool -->
-      <article class="card" aria-labelledby="c2">
-        <img src="images/card-akool.svg"
-             alt="Guide Akool lip-sync & avatars"
-             width="640" height="360"
-             loading="lazy" decoding="async"
-             onerror="this.onerror=null;this.src='images/card-akool.jpg';" />
-        <h3 id="c2">Akool : lip-sync, avatars & traduction vidéo</h3>
-        <p>Talking Photo, LipSync, Video Translate : localisez vos contenus et créez des présentateurs IA.</p>
-        <p><small>15 août 2025 · ~15 min de lecture</small></p>
-        <div class="cta-row">
-          <a class="btn" href="blog-akool.html">Lire le guide Akool</a>
-          <a class="btn btn-primary" href="https://akool.com/?via=rayzideoai" rel="sponsored">Essayer Akool</a>
-        </div>
-      </article>
-
-      <!-- HeyGen -->
-      <article class="card" aria-labelledby="c3">
-        <img src="images/card-heygen.svg"
-             alt="Guide HeyGen 5.0 avatars IA"
-             width="640" height="360"
-             loading="lazy" decoding="async"
-             onerror="this.onerror=null;this.src='images/card-heygen.jpg';" />
-        <h3 id="c3">HeyGen 5.0 : présentateur IA & cas d'usage pro</h3>
-        <p>Avatars multilingues, studio intégré et bonnes pratiques pour cours, onboarding et annonces.</p>
-        <p><small>15 août 2025 · ~13 min de lecture</small></p>
-        <div class="cta-row">
-          <a class="btn" href="blog-heygen.html">Lire le guide HeyGen</a>
-          <a class="btn btn-primary" href="https://www.heygen.com/?sid=rewardful&via=rayzvideoai" data-link-pending="true" rel="sponsored">Essayer HeyGen</a>
-        </div>
-      </article>
-
-      <!-- InVideo -->
-      <article class="card" aria-labelledby="c4">
-        <img src="images/card-invideo.webp"
-             srcset="images/card-invideo.webp 1x, images/card-invideo.jpg 2x"
-             alt="Guide InVideo AI templates"
-             width="640" height="360"
-             loading="lazy" decoding="async" />
-        <h3 id="c4">InVideo : templates & montage express (2025)</h3>
-        <p>Créez des pubs, trailers et posts sociaux en un temps record grâce aux templates & quick tools.</p>
-        <p><small>15 août 2025 · ~12 min de lecture</small></p>
-        <div class="cta-row">
-          <a class="btn" href="blog-invideo.html">Lire le guide InVideo</a>
-          <a class="btn btn-primary" href="https://invideo.sjv.io/3JrYry" data-link-pending="true" rel="sponsored">Essayer InVideo</a>
-        </div>
-      </article>
-    </div>
-  </div>
+<section aria-labelledby="cards-title" class="intro">
+<div class="container">
+<h2 id="cards-title">Derniers articles</h2>
+<div class="grid blog-two">
+<!-- Pictory -->
+<article aria-labelledby="c1" class="card">
+<img alt="Guide Pictory AI" decoding="async" fetchpriority="high" height="360" loading="eager" src="images/card-pictory.webp" srcset="images/card-pictory.webp 1x, images/card-pictory.jpg 2x" width="640"/>
+<h3 id="c1">Pictory : avis, tutoriel &amp; prix (guide 2025)</h3>
+<p>Script/URL → vidéo en minutes : cas d'usage, workflow pas-à-pas, erreurs à éviter et checklists.</p>
+<p><small>15 août 2025 · ~14 min de lecture</small></p>
+<div class="cta-row">
+<a class="btn" href="blog-pictory.html">Lire le guide Pictory</a>
+<a class="btn btn-primary" href="https://pictory.ai?ref=pictoryavis" rel="sponsored">Essayer Pictory</a>
+</div>
+</article>
+<!-- Akool -->
+<article aria-labelledby="c2" class="card">
+<img alt="Guide Akool lip-sync &amp; avatars" decoding="async" height="360" loading="lazy" onerror="this.onerror=null;this.src='images/card-akool.jpg';" src="images/card-akool.svg" width="640"/>
+<h3 id="c2">Akool : lip-sync, avatars &amp; traduction vidéo</h3>
+<p>Talking Photo, LipSync, Video Translate : localisez vos contenus et créez des présentateurs IA.</p>
+<p><small>15 août 2025 · ~15 min de lecture</small></p>
+<div class="cta-row">
+<a class="btn" href="blog-akool.html">Lire le guide Akool</a>
+<a class="btn btn-primary" href="https://akool.com/?via=rayzideoai" rel="sponsored">Essayer Akool</a>
+</div>
+</article>
+<!-- HeyGen -->
+<article aria-labelledby="c3" class="card">
+<img alt="Guide HeyGen 5.0 avatars IA" decoding="async" height="360" loading="lazy" onerror="this.onerror=null;this.src='images/card-heygen.jpg';" src="images/card-heygen.svg" width="640"/>
+<h3 id="c3">HeyGen 5.0 : présentateur IA &amp; cas d'usage pro</h3>
+<p>Avatars multilingues, studio intégré et bonnes pratiques pour cours, onboarding et annonces.</p>
+<p><small>15 août 2025 · ~13 min de lecture</small></p>
+<div class="cta-row">
+<a class="btn" href="blog-heygen.html">Lire le guide HeyGen</a>
+<a class="btn btn-primary" data-link-pending="true" href="https://www.heygen.com/?sid=rewardful&amp;via=rayzvideoai" rel="sponsored">Essayer HeyGen</a>
+</div>
+</article>
+<!-- InVideo -->
+<article aria-labelledby="c4" class="card">
+<img alt="Guide InVideo AI templates" decoding="async" height="360" loading="lazy" src="images/card-invideo.webp" srcset="images/card-invideo.webp 1x, images/card-invideo.jpg 2x" width="640"/>
+<h3 id="c4">InVideo : templates &amp; montage express (2025)</h3>
+<p>Créez des pubs, trailers et posts sociaux en un temps record grâce aux templates &amp; quick tools.</p>
+<p><small>15 août 2025 · ~12 min de lecture</small></p>
+<div class="cta-row">
+<a class="btn" href="blog-invideo.html">Lire le guide InVideo</a>
+<a class="btn btn-primary" data-link-pending="true" href="https://invideo.sjv.io/3JrYry" rel="sponsored">Essayer InVideo</a>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <!-- SECTION CAPTURE pour que le lien #contact fonctionne -->
-<section class="capture" id="contact" aria-labelledby="newsletter-title">
-  <div class="container">
-    <h2 id="newsletter-title">Recevoir nos nouveaux guides IA vidéo</h2>
-    <form class="newsletter" action="https://example.com/subscribe" method="POST">
-      <!-- TODO: Remplacer par l'endpoint Systeme.io/Mailchimp -->
-      <label for="e1" class="sr-only">Email</label>
-      <input id="e1" name="email" type="email" required inputmode="email" placeholder="votre@email" />
-      <button class="btn btn-primary" type="submit">S'inscrire</button>
-    </form>
-  </div>
+<section aria-labelledby="newsletter-title" class="capture" id="contact">
+<div class="container">
+<h2 id="newsletter-title">Recevoir nos nouveaux guides IA vidéo</h2>
+<form action="https://example.com/subscribe" class="newsletter" method="POST">
+<!-- TODO: Remplacer par l'endpoint Systeme.io/Mailchimp -->
+<label class="sr-only" for="e1">Email</label>
+<input id="e1" inputmode="email" name="email" placeholder="votre@email" required="" type="email"/>
+<button class="btn btn-primary" type="submit">S'inscrire</button>
+</form>
+</div>
 </section>
-
 </main><!-- /main -->
-
 <!-- FOOTER (identique Home) -->
 <footer class="footer" role="contentinfo">
-  <div class="container">
-    <div>
-      <strong>E-Com Shop</strong> — 60 rue François 1er, 75008 PARIS — SIREN 934934308<br/>
+<div class="container">
+<div>
+<strong>E-Com Shop</strong> — 60 rue François 1er, 75008 PARIS — SIREN 934934308<br/>
       Dirigeant : Tony CARON — Hébergeur : Netlify — contact :
       <a href="mailto:contact.ecomshopfrance@gmail.com">contact.ecomshopfrance@gmail.com</a>
-    </div>
-    <nav class="footer-nav" aria-label="Liens utilitaires">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </div>
-</footer>
-
-<!-- Bannière cookies -->
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Bannière cookies">
-  <p>Nous utilisons des cookies analytiques (Google Analytics 4) pour améliorer le site. <a href="politique-de-confidentialite.html">En savoir plus</a></p>
-  <div class="btn-row">
-    <button id="cookie-accept" class="btn btn-primary">Accepter</button>
-    <button id="cookie-reject" class="btn">Refuser</button>
-  </div>
 </div>
-
-<script src="main.min.js" defer></script>
-
+<nav aria-label="Liens utilitaires" class="footer-nav">
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+<a href="blog.html">Blog</a>
+</nav>
+</div>
+</footer>
+<!-- Bannière cookies -->
+<div aria-label="Bannière cookies" aria-live="polite" class="cookie-banner" id="cookie-banner" role="dialog">
+<p>Nous utilisons des cookies analytiques (Google Analytics 4) pour améliorer le site. <a href="politique-de-confidentialite.html">En savoir plus</a></p>
+<div class="btn-row">
+<button class="btn btn-primary" id="cookie-accept">Accepter</button>
+<button class="btn" id="cookie-reject">Refuser</button>
+</div>
+</div>
+<script defer="" src="main.min.js"></script>
 </body>
 </html>
