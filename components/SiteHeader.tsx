@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { LanguageSelect } from '@/components/LanguageSelect';
-import { blogIndexPath, getLangFromPathname, homePath, privacyPath, legalNoticePath, UI_TRANSLATIONS, SITE } from '@/lib/site';
+import { blogIndexPath, getLangFromPathname, homePath, UI_TRANSLATIONS, SITE } from '@/lib/site';
 
 export function SiteHeader() {
   const pathname = usePathname() ?? '/';
@@ -13,8 +13,6 @@ export function SiteHeader() {
 
   const home = homePath(lang);
   const blog = blogIndexPath(lang);
-  const legal = legalNoticePath(lang);
-  const privacy = privacyPath(lang);
 
   const [open, setOpen] = useState(false);
 
@@ -45,15 +43,20 @@ export function SiteHeader() {
           </button>
 
           <nav aria-label="Primary" className={`nav ${open ? 'open' : ''}`} id="site-nav">
-            <Link href={`${home}#comparatif`}>{t.comparison}</Link>
-            <Link href={`${home}#outils`}>{t.tools}</Link>
-            <Link href={`${home}#pourquoi`}>{t.whyAi}</Link>
-            <Link href={`${home}#guide`}>{t.choose}</Link>
-            <Link href={`${home}#faq`}>{t.faq}</Link>
             <Link href={blog}>{t.blog}</Link>
-            <Link href={`${home}#contact`}>{t.contact}</Link>
-            <Link className="nav-muted" href={privacy}>{t.privacy}</Link>
-            <Link className="nav-muted" href={legal}>{t.legal}</Link>
+            <span aria-hidden="true" className="nav-sep" />
+            <a className="aff-link" href={SITE.affiliateLinks.pictory} rel="sponsored noopener noreferrer" target="_blank">
+              Pictory
+            </a>
+            <a className="aff-link" href={SITE.affiliateLinks.akool} rel="sponsored noopener noreferrer" target="_blank">
+              Akool
+            </a>
+            <a className="aff-link" href={SITE.affiliateLinks.heygen} rel="sponsored noopener noreferrer" target="_blank">
+              HeyGen
+            </a>
+            <a className="aff-link" href={SITE.affiliateLinks.invideo} rel="sponsored noopener noreferrer" target="_blank">
+              InVideo
+            </a>
           </nav>
 
           <LanguageSelect />

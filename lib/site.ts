@@ -2,6 +2,12 @@ export const SITE = {
   baseUrl: 'https://rayzvideoai.com',
   domain: 'rayzvideoai.com',
   brandName: 'RayzVideoAI',
+  affiliateLinks: {
+    pictory: 'https://pictory.ai?ref=pictoryavis',
+    akool: 'https://akool.com/?via=rayzideoai',
+    heygen: 'https://www.heygen.com/?sid=rewardful&via=rayzvideoai',
+    invideo: 'https://invideo.sjv.io/3JrYry',
+  },
   companyName: 'E-Com Shop',
   companyAddress: '60 rue François 1er, 75008 PARIS',
   companyId: 'SIREN 934934308',

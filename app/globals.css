@@ -25,6 +25,9 @@ a:hover{text-decoration:underline}
 .nav a{padding:8px 10px;border-radius:10px}
 .nav a:hover{text-decoration:none;background:rgba(255,255,255,.06)}
 .nav .nav-muted{opacity:.85;font-size:13px}
+.nav-sep{width:1px;height:18px;background:var(--border);opacity:.8;margin:0 6px}
+.aff-link{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);padding:7px 10px;border-radius:999px;font-size:13px;line-height:1;color:var(--fg)}
+.aff-link:hover{text-decoration:none;background:rgba(255,255,255,.08)}
 .burger{display:none;appearance:none;border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:12px;padding:8px 10px;cursor:pointer}
 .burger span{display:block;width:18px;height:2px;background:var(--fg);border-radius:2px}
 .burger span+span{margin-top:4px}
@@ -33,6 +36,7 @@ a:hover{text-decoration:underline}
   .nav{display:none}
   .nav.open{display:flex;position:absolute;right:24px;top:62px;flex-direction:column;align-items:stretch;min-width:220px;padding:10px;border:1px solid var(--border);background:rgba(11,16,34,.95);border-radius:14px;box-shadow:var(--shadow)}
   .nav.open a{width:100%}
+  .nav.open .nav-sep{display:none}
 }
 .footer{border-top:1px solid var(--border);margin-top:32px}
 .footer-inner{max-width:960px;margin:0 auto;padding:18px 24px;color:var(--muted);font-size:14px}
@@ -72,6 +76,11 @@ th,td{border-bottom:1px solid var(--border);padding:10px;vertical-align:top}
 th{background:rgba(255,255,255,.04);text-align:left}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:2px 6px;font-size:12px}
 pre{overflow:auto;padding:12px;border:1px solid var(--border);border-radius:14px;background:rgba(0,0,0,.25)}
+
+/* Hero media (avoid poster + video duplicating) */
+.hero-media{position:relative;overflow:hidden;border-radius:18px;background:rgba(0,0,0,.25);aspect-ratio:16/9;min-height:220px}
+.hero-media picture,.hero-media video{position:absolute;inset:0;width:100%;height:100%}
+.hero-media .hero-poster,.hero-media .hero-video{width:100%;height:100%;object-fit:cover;border-radius:0}
 
 /* Accessible helpers */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
