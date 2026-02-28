@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { CookieBanner } from '@/components/CookieBanner';
 import { LangHtmlUpdater } from '@/components/LangHtmlUpdater';
+import { FaqEnhancer } from '@/components/FaqEnhancer';
 
 export const viewport: Viewport = {
   themeColor: '#050816',
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" suppressHydrationWarning>
       <body>
         <LangHtmlUpdater />
+        <FaqEnhancer />
         <SiteHeader />
         <main className="container">{children}</main>
         <SiteFooter />
