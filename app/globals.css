@@ -92,7 +92,8 @@ pre{overflow:auto;padding:12px;border:1px solid var(--border);border-radius:14px
 
 /* Language select */
 .lang-select-container{display:flex;align-items:center}
-.lang-select{appearance:none;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--fg);border-radius:12px;padding:10px 34px 10px 12px;cursor:pointer}
+.lang-select{appearance:none;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--fg);border-radius:12px;padding:10px 34px 10px 12px;cursor:pointer;color-scheme:dark}
+.lang-select option{background:var(--card);color:var(--fg)}
 
 /* Cookie banner */
 .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;border:1px solid var(--border);background:rgba(11,16,34,.95);backdrop-filter:saturate(1.2) blur(10px);border-radius:16px;padding:14px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center;justify-content:space-between;z-index:50}
