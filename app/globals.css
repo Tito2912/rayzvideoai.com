@@ -1,0 +1,92 @@
+/* Brand: RayzVideoAI (legacy theme color: #050816) */
+:root{
+  --bg:#050816;
+  --fg:#f5f7ff;
+  --muted:#a7b0c2;
+  --card:#0b1022;
+  --border:#1f2a4a;
+  --link:#22d3ee;
+  --link2:#7c3aed;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;color:var(--fg);background:var(--bg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.55}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:960px;margin:0 auto;padding:24px}
+.stack>*+*{margin-top:18px}
+.header{border-bottom:1px solid var(--border);background:rgba(5,8,22,.85);backdrop-filter:saturate(1.2) blur(10px);position:sticky;top:0;z-index:10}
+.header-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-0.02em}
+.brand-mark{width:14px;height:14px;border-radius:999px;background:linear-gradient(135deg,var(--link2),var(--link));box-shadow:0 0 0 4px rgba(34,211,238,.12)}
+.brand-text{line-height:1}
+.header-right{display:flex;align-items:center;gap:10px}
+.nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.nav a{padding:8px 10px;border-radius:10px}
+.nav a:hover{text-decoration:none;background:rgba(255,255,255,.06)}
+.nav .nav-muted{opacity:.85;font-size:13px}
+.burger{display:none;appearance:none;border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:12px;padding:8px 10px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--fg);border-radius:2px}
+.burger span+span{margin-top:4px}
+@media(max-width:860px){
+  .burger{display:inline-flex;flex-direction:column;justify-content:center}
+  .nav{display:none}
+  .nav.open{display:flex;position:absolute;right:24px;top:62px;flex-direction:column;align-items:stretch;min-width:220px;padding:10px;border:1px solid var(--border);background:rgba(11,16,34,.95);border-radius:14px;box-shadow:var(--shadow)}
+  .nav.open a{width:100%}
+}
+.footer{border-top:1px solid var(--border);margin-top:32px}
+.footer-inner{max-width:960px;margin:0 auto;padding:18px 24px;color:var(--muted);font-size:14px}
+.footer-meta{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+.footer-nav{display:flex;gap:12px;flex-wrap:wrap}
+.footer-sub{margin-top:12px;opacity:.9}
+.hero h1{margin:0;font-size:34px;line-height:1.1}
+.hero p{margin:10px 0 0;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.muted{color:var(--muted);font-size:14px}
+.list{padding-left:18px}
+.article h1{font-size:34px;line-height:1.15;margin:0 0 10px}
+.article .lede{color:var(--muted);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:900px){.grid{grid-template-columns:2fr 1fr}}
+.toc{position:sticky;top:86px}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li+li{margin-top:6px}
+.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:2px 6px;font-size:12px}
+.hr{height:1px;background:var(--border);border:0;margin:18px 0}
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.badge{border:1px solid var(--border);border-radius:999px;padding:4px 10px;font-size:12px;background:rgba(255,255,255,.04);color:var(--muted)}
+.cta{border:1px solid var(--border);border-radius:14px;padding:14px;background:rgba(255,255,255,.04)}
+.cta strong{display:block;margin-bottom:6px}
+.proscons{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.proscons{grid-template-columns:1fr 1fr}}
+.proscons ul{margin:8px 0 0;padding-left:18px}
+.faq details{border:1px solid var(--border);border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.04)}
+.faq details+details{margin-top:10px}
+.faq summary{cursor:pointer;font-weight:700}
+
+/* Base content styling (MDX HTML) */
+img,video,iframe{max-width:100%;height:auto;border-radius:14px}
+iframe{border:0;background:#000}
+table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+th,td{border-bottom:1px solid var(--border);padding:10px;vertical-align:top}
+th{background:rgba(255,255,255,.04);text-align:left}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:2px 6px;font-size:12px}
+pre{overflow:auto;padding:12px;border:1px solid var(--border);border-radius:14px;background:rgba(0,0,0,.25)}
+
+/* Accessible helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Buttons */
+.btn,.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--fg);cursor:pointer;text-decoration:none}
+.btn:hover,.btn-primary:hover{text-decoration:none;background:rgba(255,255,255,.08)}
+.btn-primary{border-color:rgba(34,211,238,.5);background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.2))}
+
+/* Language select */
+.lang-select-container{display:flex;align-items:center}
+.lang-select{appearance:none;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--fg);border-radius:12px;padding:10px 34px 10px 12px;cursor:pointer}
+
+/* Cookie banner */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;border:1px solid var(--border);background:rgba(11,16,34,.95);backdrop-filter:saturate(1.2) blur(10px);border-radius:16px;padding:14px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center;justify-content:space-between;z-index:50}
+.cookie-banner p{margin:0;color:var(--muted);font-size:14px}
+.cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
+.cookie-banner.hidden{display:none}

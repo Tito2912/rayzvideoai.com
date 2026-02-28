@@ -1,0 +1,87 @@
+# Canonical home
+/index.html / 301!
+/index / 301!
+
+# Locale index -> canonical
+/en/index.html /en/ 301!
+/en/index /en/ 301!
+/es/index.html /es/ 301!
+/es/index /es/ 301!
+/de/index.html /de/ 301!
+/de/index /de/ 301!
+
+# Old .html -> canonical URLs (FR)
+/blog.html /blog 301!
+/blog-pictory.html /blog-pictory 301!
+/blog-akool.html /blog-akool 301!
+/blog-heygen.html /blog-heygen 301!
+/blog-invideo.html /blog-invideo 301!
+/mentions-legales.html /mentions-legales 301!
+/politique-de-confidentialite.html /politique-de-confidentialite 301!
+
+# Old .html -> canonical URLs (EN)
+/en/blog.html /en/blog 301!
+/en/blog-pictory.html /en/blog-pictory 301!
+/en/blog-akool.html /en/blog-akool 301!
+/en/blog-heygen.html /en/blog-heygen 301!
+/en/blog-invideo.html /en/blog-invideo 301!
+/en/legal-notice.html /en/legal-notice 301!
+/en/privacy-policy.html /en/privacy-policy 301!
+
+# Old .html -> canonical URLs (ES)
+/es/blog.html /es/blog 301!
+/es/blog-pictory.html /es/blog-pictory 301!
+/es/blog-akool.html /es/blog-akool 301!
+/es/blog-heygen.html /es/blog-heygen 301!
+/es/blog-invideo.html /es/blog-invideo 301!
+/es/legal-notice.html /es/legal-notice 301!
+/es/privacy-policy.html /es/privacy-policy 301!
+
+# Old .html -> canonical URLs (DE)
+/de/blog.html /de/blog 301!
+/de/blog-pictory.html /de/blog-pictory 301!
+/de/blog-akool.html /de/blog-akool 301!
+/de/blog-heygen.html /de/blog-heygen 301!
+/de/blog-invideo.html /de/blog-invideo 301!
+/de/legal-notice.html /de/legal-notice 301!
+/de/privacy-policy.html /de/privacy-policy 301!
+
+# Legacy short URLs
+/guide-pictory /blog-pictory 301!
+/guide-akool /blog-akool 301!
+/guide-heygen /blog-heygen 301!
+/guide-invideo /blog-invideo 301!
+
+# Legacy /fr prefix
+/fr/* /:splat 301!
+
+# Next export: serve pages for pretty URLs (avoid folder vs .html issues)
+/en /en.html 200
+/en/ /en.html 200
+/es /es.html 200
+/es/ /es.html 200
+/de /de.html 200
+/de/ /de.html 200
+
+/blog /blog.html 200
+/blog/ /blog.html 200
+/blog-pictory /blog-pictory.html 200
+/blog-pictory/ /blog-pictory.html 200
+/blog-akool /blog-akool.html 200
+/blog-akool/ /blog-akool.html 200
+/blog-heygen /blog-heygen.html 200
+/blog-heygen/ /blog-heygen.html 200
+/blog-invideo /blog-invideo.html 200
+/blog-invideo/ /blog-invideo.html 200
+/mentions-legales /mentions-legales.html 200
+/mentions-legales/ /mentions-legales.html 200
+/politique-de-confidentialite /politique-de-confidentialite.html 200
+/politique-de-confidentialite/ /politique-de-confidentialite.html 200
+
+/en/* /en/:splat.html 200
+/en/*/ /en/:splat.html 200
+/es/* /es/:splat.html 200
+/es/*/ /es/:splat.html 200
+/de/* /de/:splat.html 200
+/de/*/ /de/:splat.html 200
+
