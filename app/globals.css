@@ -100,3 +100,15 @@ pre{overflow:auto;padding:12px;border:1px solid var(--border);border-radius:14px
 .cookie-banner p{margin:0;color:var(--muted);font-size:14px}
 .cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
 .cookie-banner.hidden{display:none}
+
+/* Home: tools cards */
+.tools .grid{grid-template-columns:1fr}
+.tools .card{display:grid;grid-template-columns:96px 1fr;column-gap:16px;row-gap:10px}
+.tools .card>img{grid-column:1;grid-row:1;align-self:start;justify-self:center;width:64px;height:64px;max-width:none;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);padding:6px}
+.tools .card>:not(img){grid-column:2}
+.tools .card h3{margin-top:0}
+@media(max-width:680px){
+  .tools .card{grid-template-columns:1fr}
+  .tools .card>img{grid-column:auto;grid-row:auto;justify-self:start}
+  .tools .card>:not(img){grid-column:auto}
+}
