@@ -14,10 +14,7 @@ export function SiteFooter() {
       <div className="footer-inner">
         <div className="footer-meta">
           <div>
-            <strong>{SITE.companyName}</strong> — {SITE.companyAddress} — {SITE.companyId}
-            <br />
-            {t.managerLabel}: {SITE.managerName} — {t.hostLabel}: {SITE.hostName} — {t.contactLabel}:{' '}
-            <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+            <strong>{SITE.brandName}</strong>
           </div>
           <nav aria-label="Utility links" className="footer-nav">
             <Link href={legalNoticePath(lang)}>{t.legal}</Link>
