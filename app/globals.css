@@ -131,3 +131,15 @@ pre{overflow:auto;padding:12px;border:1px solid var(--border);border-radius:14px
   .tools .card>img{grid-column:auto;grid-row:auto;justify-self:start}
   .tools .card>:not(img){grid-column:auto}
 }
+
+/* Blog: index cards */
+.blog-two{grid-template-columns:1fr}
+.blog-two .card{display:grid;grid-template-columns:240px 1fr;column-gap:16px;row-gap:10px;align-items:start}
+.blog-two .card>img{grid-column:1;grid-row:1;width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);padding:0}
+.blog-two .card>:not(img){grid-column:2}
+.blog-two .card h3{margin-top:0}
+@media(max-width:720px){
+  .blog-two .card{grid-template-columns:1fr}
+  .blog-two .card>img{grid-column:auto;grid-row:auto;height:auto}
+  .blog-two .card>:not(img){grid-column:auto}
+}
