@@ -107,6 +107,7 @@ pre{overflow:auto;padding:12px;border:1px solid var(--border);border-radius:14px
 .btn,.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--fg);cursor:pointer;text-decoration:none}
 .btn:hover,.btn-primary:hover{text-decoration:none;background:rgba(255,255,255,.08)}
 .btn-primary{border-color:rgba(34,211,238,.5);background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.2))}
+.btn-row,.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 
 /* Language select */
 .lang-select-container{display:flex;align-items:center}
