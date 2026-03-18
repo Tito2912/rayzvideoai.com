@@ -29,6 +29,9 @@ export const UI_TRANSLATIONS: Record<
     choose: string;
     faq: string;
     blog: string;
+    about: string;
+    methodology: string;
+    sources: string;
     contact: string;
     legal: string;
     privacy: string;
@@ -49,6 +52,9 @@ export const UI_TRANSLATIONS: Record<
     choose: 'Choisir',
     faq: 'FAQ',
     blog: 'Blog',
+    about: 'À propos',
+    methodology: 'Méthodologie',
+    sources: 'Sources',
     contact: 'Contact',
     legal: 'Mentions légales',
     privacy: 'Politique de confidentialité',
@@ -69,6 +75,9 @@ export const UI_TRANSLATIONS: Record<
     choose: 'Choose',
     faq: 'FAQ',
     blog: 'Blog',
+    about: 'About',
+    methodology: 'Methodology',
+    sources: 'Sources',
     contact: 'Contact',
     legal: 'Legal notice',
     privacy: 'Privacy policy',
@@ -88,6 +97,9 @@ export const UI_TRANSLATIONS: Record<
     choose: 'Elegir',
     faq: 'FAQ',
     blog: 'Blog',
+    about: 'Acerca de',
+    methodology: 'Metodología',
+    sources: 'Fuentes',
     contact: 'Contacto',
     legal: 'Aviso legal',
     privacy: 'Política de privacidad',
@@ -107,6 +119,9 @@ export const UI_TRANSLATIONS: Record<
     choose: 'Wählen',
     faq: 'FAQ',
     blog: 'Blog',
+    about: 'Über uns',
+    methodology: 'Methodik',
+    sources: 'Quellen',
     contact: 'Kontakt',
     legal: 'Rechtliche Hinweise',
     privacy: 'Datenschutzbestimmungen',
@@ -159,6 +174,26 @@ export function legalNoticePath(lang: Lang): string {
 export function privacyPath(lang: Lang): string {
   if (lang === 'fr') return '/politique-de-confidentialite';
   return `${prefixPath(lang)}/privacy-policy`;
+}
+
+export function aboutPath(lang: Lang): string {
+  const prefix = prefixPath(lang);
+  return `${prefix}/about`.replace(/\/{2,}/g, '/');
+}
+
+export function methodologyPath(lang: Lang): string {
+  const prefix = prefixPath(lang);
+  return `${prefix}/methodology`.replace(/\/{2,}/g, '/');
+}
+
+export function sourcesPath(lang: Lang): string {
+  const prefix = prefixPath(lang);
+  return `${prefix}/sources`.replace(/\/{2,}/g, '/');
+}
+
+export function contactPath(lang: Lang): string {
+  const prefix = prefixPath(lang);
+  return `${prefix}/contact`.replace(/\/{2,}/g, '/');
 }
 
 export function localizedUrl(pathname: string, lang: Lang): string {
