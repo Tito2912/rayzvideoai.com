@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getLangFromPathname, privacyPath, UI_TRANSLATIONS } from '@/lib/site';
+import { getLangFromPathname, privacyPath, SITE, UI_TRANSLATIONS } from '@/lib/site';
 
 type Consent = 'accepted' | 'refused';
 const COOKIE_KEY = 'rayz_cookies';
@@ -28,6 +28,28 @@ function setCookie(name: string, value: string) {
   document.cookie = `${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax${secure}`;
 }
 
+function ensureGa4Loaded() {
+  const id = SITE.ga4Id;
+  if (!id) return;
+  const w = window as any;
+  if (w.__rayz_ga4_loaded) return;
+  w.__rayz_ga4_loaded = true;
+
+  const ext = document.createElement('script');
+  ext.async = true;
+  ext.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+  document.head.appendChild(ext);
+
+  const inline = document.createElement('script');
+  inline.text = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${id}', { anonymize_ip: true });
+  `;
+  document.head.appendChild(inline);
+}
+
 export function CookieBanner() {
   const pathname = usePathname() ?? '/';
   const lang = getLangFromPathname(pathname);
@@ -38,12 +60,14 @@ export function CookieBanner() {
   useEffect(() => {
     try {
       const cookieConsent = getCookie(COOKIE_KEY) as Consent | null;
+      if (cookieConsent === 'accepted') ensureGa4Loaded();
       if (cookieConsent === 'accepted' || cookieConsent === 'refused') {
         setHidden(true);
         return;
       }
 
       const storageConsent = localStorage.getItem(COOKIE_KEY) as Consent | null;
+      if (storageConsent === 'accepted') ensureGa4Loaded();
       if (storageConsent === 'accepted' || storageConsent === 'refused') {
         setHidden(true);
         return;
@@ -62,6 +86,7 @@ export function CookieBanner() {
     } catch {
       // ignore
     }
+    if (consent === 'accepted') ensureGa4Loaded();
     setHidden(true);
   }
 

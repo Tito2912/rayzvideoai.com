@@ -2,9 +2,10 @@ export const SITE = {
   baseUrl: 'https://rayzvideoai.com',
   domain: 'rayzvideoai.com',
   brandName: 'RayzVideoAI',
+  ga4Id: 'G-T5NE017KTW',
   affiliateLinks: {
     pictory: 'https://pictory.ai?ref=pictoryavis',
-    akool: 'https://akool.com/?via=rayzideoai',
+    akool: 'https://akool.com/?via=rayzvideoai',
     heygen: 'https://www.heygen.com/?sid=rewardful&via=rayzvideoai',
     invideo: 'https://invideo.sjv.io/3JrYry',
   },

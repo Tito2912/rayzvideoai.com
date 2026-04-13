@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { ArticleLayout } from '@/components/ArticleLayout';
 import { getAllDocMetas, getAllStaticParams, getDocMetaByRouteSegments, getPostByRouteSegments } from '@/lib/content';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd } from '@/lib/schema';
+import { SITE } from '@/lib/site';
 import { buildAlternates, getOpenGraphImage, getOpenGraphType, parseRobots } from '@/lib/seo';
 
 export async function generateStaticParams() {
@@ -18,9 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const all = await getAllDocMetas();
   const ogImage = getOpenGraphImage(meta);
   const canonical = meta.canonical ?? meta.routePath;
+  const lowerTitle = meta.title.toLowerCase();
+  const isAlreadyBranded =
+    lowerTitle.includes(SITE.brandName.toLowerCase()) || lowerTitle.includes(SITE.domain.toLowerCase());
 
   return {
-    title: meta.title,
+    title: isAlreadyBranded ? { absolute: meta.title } : meta.title,
     description: meta.description,
     alternates: buildAlternates(meta, all),
     robots: parseRobots(meta.robots),
@@ -73,4 +77,3 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
     </>
   );
 }
-

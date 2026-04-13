@@ -37,6 +37,7 @@ export type DocMeta = {
   translationKey?: string;
   date?: string;
   updatedAt?: string;
+  lastModified: string;
   robots?: string;
   type?: PostType;
 };
@@ -256,7 +257,7 @@ export async function getAllDocMetas(): Promise<DocMeta[]> {
     const routePath = segmentsToRoutePath(segments);
     const slug = segments.join('/');
 
-    const raw = await fs.readFile(filePath, 'utf8');
+    const [raw, stats] = await Promise.all([fs.readFile(filePath, 'utf8'), fs.stat(filePath)]);
     const { data } = matter(raw);
     const fm = data as Frontmatter;
 
@@ -271,6 +272,7 @@ export async function getAllDocMetas(): Promise<DocMeta[]> {
       translationKey: fm.translationKey,
       date: fm.date,
       updatedAt: fm.updatedAt,
+      lastModified: fm.updatedAt ?? fm.date ?? stats.mtime.toISOString(),
       robots: fm.robots,
       type: inferTypeFromSegments(segments, fm),
     });
@@ -288,7 +290,7 @@ export async function getDocMetaByRouteSegments(segments: string[]): Promise<Doc
   const routePath = segmentsToRoutePath(resolvedSegments);
   const slug = resolvedSegments.join('/');
 
-  const raw = await fs.readFile(filePath, 'utf8');
+  const [raw, stats] = await Promise.all([fs.readFile(filePath, 'utf8'), fs.stat(filePath)]);
   const { data } = matter(raw);
   const fm = data as Frontmatter;
 
@@ -303,6 +305,7 @@ export async function getDocMetaByRouteSegments(segments: string[]): Promise<Doc
     translationKey: fm.translationKey,
     date: fm.date,
     updatedAt: fm.updatedAt,
+    lastModified: fm.updatedAt ?? fm.date ?? stats.mtime.toISOString(),
     robots: fm.robots,
     type: inferTypeFromSegments(resolvedSegments, fm),
   };
