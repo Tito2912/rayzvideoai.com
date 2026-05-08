@@ -24,6 +24,10 @@ export function buildAlternates(meta: DocMeta, all: DocMeta[]): Metadata['altern
     languages[m.lang] = m.canonical ?? m.routePath;
   }
 
+  if (languages.fr && !languages['x-default']) {
+    languages['x-default'] = languages.fr;
+  }
+
   return {
     canonical,
     languages: Object.keys(languages).length ? languages : undefined,
