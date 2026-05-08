@@ -43,6 +43,12 @@ export const UI_TRANSLATIONS: Record<
     accept: string;
     refuse: string;
     language: string;
+    quickAnswer: string;
+    nextSteps: string;
+    onThisPage: string;
+    notFound: string;
+    notFoundText: string;
+    backTo: string;
   }
 > = {
   fr: {
@@ -67,6 +73,12 @@ export const UI_TRANSLATIONS: Record<
     accept: 'Accepter',
     refuse: 'Refuser',
     language: 'Langue',
+    quickAnswer: 'Réponse rapide',
+    nextSteps: 'Prochaines étapes',
+    onThisPage: 'Sur cette page',
+    notFound: 'Page introuvable',
+    notFoundText: "La page que vous cherchez n'existe pas (ou a été déplacée).",
+    backTo: 'Retour à',
   },
   en: {
     home: 'Home',
@@ -89,6 +101,12 @@ export const UI_TRANSLATIONS: Record<
     accept: 'Accept',
     refuse: 'Refuse',
     language: 'Language',
+    quickAnswer: 'Quick answer',
+    nextSteps: 'Next steps',
+    onThisPage: 'On this page',
+    notFound: 'Page not found',
+    notFoundText: "The page you are looking for doesn't exist (or has moved).",
+    backTo: 'Back to',
   },
   es: {
     home: 'Inicio',
@@ -111,6 +129,12 @@ export const UI_TRANSLATIONS: Record<
     accept: 'Aceptar',
     refuse: 'Rechazar',
     language: 'Idioma',
+    quickAnswer: 'Respuesta rápida',
+    nextSteps: 'Próximos pasos',
+    onThisPage: 'En esta página',
+    notFound: 'Página no encontrada',
+    notFoundText: 'La página que buscas no existe (o se ha movido).',
+    backTo: 'Volver a',
   },
   de: {
     home: 'Start',
@@ -133,6 +157,12 @@ export const UI_TRANSLATIONS: Record<
     accept: 'Annahme',
     refuse: 'Verweigerung',
     language: 'Sprache',
+    quickAnswer: 'Schnelle Antwort',
+    nextSteps: 'Nächste Schritte',
+    onThisPage: 'Auf dieser Seite',
+    notFound: 'Seite nicht gefunden',
+    notFoundText: 'Die gesuchte Seite existiert nicht (oder wurde verschoben).',
+    backTo: 'Zurück zu',
   },
 };
 
