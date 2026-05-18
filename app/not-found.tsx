@@ -1,14 +1,14 @@
-‘use client’;
+'use client';
 
-import Link from ‘next/link’;
-import { usePathname } from ‘next/navigation’;
-import { SITE, UI_TRANSLATIONS, getLangFromPathname, prefixPath } from ‘@/lib/site’;
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { SITE, UI_TRANSLATIONS, getLangFromPathname, prefixPath } from '@/lib/site';
 
 export default function NotFoundPage() {
-  const pathname = usePathname() ?? ‘/’;
+  const pathname = usePathname() ?? '/';
   const lang = getLangFromPathname(pathname);
   const t = UI_TRANSLATIONS[lang];
-  const homeHref = lang === ‘fr’ ? ‘/’ : `${prefixPath(lang)}/`;
+  const homeHref = lang === 'fr' ? '/' : `${prefixPath(lang)}/`;
 
   return (
     <div className="stack">
